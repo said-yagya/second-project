@@ -1,0 +1,13 @@
+{
+  "city": "Санкт-Петербург",
+  "country": "Россия",
+  "temperature": -6,
+  "feels_like": -13,
+  "condition": "Переменная облачность",
+  "wind_speed": 25,
+  "wind_direction": "З",
+  "pressure": 773,
+  "humidity": 86,
+  "timestamp": "2025-08-06T12:55:31.585832",
+  "source": "Demo Data"
+}

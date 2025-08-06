@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Погода в Санкт-Петербурге</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌤️ Погода в Санкт-Петербурге</h1>
+            <p>Данные с AccuWeather</p>
+        </header>
+        
+        <main>
+            <div class="weather-card">
+                <div class="loading" id="loading">
+                    <div class="spinner"></div>
+                    <p>Загрузка данных о погоде...</p>
+                </div>
+                
+                <div class="weather-data" id="weatherData" style="display: none;">
+                    <div class="main-info">
+                        <div class="temperature">
+                            <span id="temperature">--°C</span>
+                            <span class="feels-like">Ощущается как <span id="feelsLike">--°C</span></span>
+                        </div>
+                        <div class="condition">
+                            <span id="condition">--</span>
+                        </div>
+                    </div>
+                    
+                    <div class="details">
+                        <div class="detail-item">
+                            <div class="detail-icon">💨</div>
+                            <div class="detail-info">
+                                <span class="detail-label">Ветер</span>
+                                <span class="detail-value">
+                                    <span id="windSpeed">--</span> км/ч
+                                    <span id="windDirection">--</span>
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">🌡️</div>
+                            <div class="detail-info">
+                                <span class="detail-label">Давление</span>
+                                <span class="detail-value" id="pressure">-- мм рт. ст.</span>
+                            </div>
+                        </div>
+                        
+                        <div class="detail-item">
+                            <div class="detail-icon">💧</div>
+                            <div class="detail-info">
+                                <span class="detail-label">Влажность</span>
+                                <span class="detail-value" id="humidity">--%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="error" id="error" style="display: none;">
+                    <p>❌ Ошибка загрузки данных о погоде</p>
+                    <button onclick="loadWeather()">Попробовать снова</button>
+                </div>
+            </div>
+            
+            <div class="controls">
+                <button onclick="loadWeather()" id="refreshBtn">🔄 Обновить</button>
+                <div class="last-update">
+                    Последнее обновление: <span id="lastUpdate">--</span>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
